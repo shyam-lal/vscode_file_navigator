@@ -5,10 +5,10 @@
   "icon": "media/navigatorLogo.png",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/shyam-lal/vscode_file_navigator"
   },
-  "description": "File navigator",
-  "version": "1.0.1",
+  "description": "Navigate between recently opened files",
+  "version": "1.0.3",
   "engines": {
     "vscode": "^1.5.0"
   },
@@ -46,12 +46,14 @@
     {
         "command": "navigator.back",
         "key": "ctrl+shift+left",
-        "mac": "ctrl+shift+left"
+        "mac": "ctrl+shift+left",
+        "linux": "ctrl+shift+left"
     },
     {
         "command": "navigator.forward",
         "key": "ctrl+shift+right",
-        "mac": "ctrl+shift+right"
+        "mac": "ctrl+shift+right",
+        "linux": "ctrl+shift+right"
     }
   ]
   },
