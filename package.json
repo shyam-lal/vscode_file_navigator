@@ -1,0 +1,74 @@
+{
+  "publisher": "lal",
+  "name": "FileNavigator",
+  "displayName": "FileNavigator",
+  "icon": "media/navigatorLogo.png",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "description": "File navigator",
+  "version": "1.0.1",
+  "engines": {
+    "vscode": "^1.5.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "workspaceContains:**/*"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "navigator.back",
+      "icon": "./media/back_arrow.png",
+      "title": "Back Arrow"
+    },
+    {
+      "command": "navigator.forward",
+      "icon": "./media/forward_arrow.png",
+      "title": "Forward arrow"
+    }],
+    "menus": {
+    "editor/title": [
+        {
+          "command": "navigator.back",
+          "group": "navigation"
+        },
+        {
+          "command": "navigator.forward",
+          "group": "navigation"
+        }
+    ]
+},
+"keybindings": [
+    {
+        "command": "navigator.back",
+        "key": "ctrl+shift+left",
+        "mac": "ctrl+shift+left"
+    },
+    {
+        "command": "navigator.forward",
+        "key": "ctrl+shift+right",
+        "mac": "ctrl+shift+right"
+    }
+  ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.5.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "eslint": "^8.34.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^4.9.5",
+    "@vscode/test-electron": "^2.2.3"
+  }
+}
